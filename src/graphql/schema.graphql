@@ -1,0 +1,55 @@
+type Query {
+  search(like: String!): [Song]!
+  song(id: ID!): Song!
+}
+
+type Mutation{
+  createArtist(data: CreateArtistInput): Artist!
+  createAlbum(data: CreateAlbumInput): Album!
+  createSong(data: CreateSongInput): Song!
+}
+
+type Artist {
+  id: ID!
+  name: String!
+  albums: [Album]!
+}
+
+type Album {
+  id: ID!
+  title: String!
+  year: Int!
+  coverImg: String!
+  songs: [Song!]!
+  artist: Artist!
+}
+
+type Song {
+  id: ID!
+  title: String!
+  duration: String!
+  genre: String!
+  album: Album!
+  artist: Artist!
+  filepath: String!
+}
+
+input CreateArtistInput {
+  name: String!
+}
+
+input CreateAlbumInput {
+  title: String!
+  year: Int!
+  coverImg: String!
+  artist: String!
+}
+
+input CreateSongInput {
+  title: String!
+  duration: String!
+  genre: String!
+  album: String!
+  artist: String!
+  filepath: String!
+}

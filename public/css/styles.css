@@ -1,0 +1,167 @@
+:root {
+  --main-bg-color: #363636;
+}
+
+html, body{
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  background: rgb(2,0,36);
+  background: linear-gradient(35deg, rgba(2,0,36,1) 0%, rgb(68, 68, 68) 100%); 
+}
+
+input{
+  width: 300px;
+  padding: 10px 20px;
+  border-color: transparent;
+  border-bottom: transparent;
+  font-size: 15px;
+  background: transparent;
+  color: #fff;
+}
+
+input:focus{
+  outline: none;
+}
+
+input::-webkit-input-placeholder {
+    padding-left: 5px;
+    font-size: 15px;
+    color: #fff;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+    padding-left: 5px;
+    font-size: 15px;
+    color: #fff;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+    padding-left: 5px;
+    font-size: 15px;
+    color: #fff;
+}
+
+#cover-background {
+  background: url(http://localhost:4000/twigs-ep-1.jpg);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+#app-wrap {
+  background-color: var(--main-bg-color);
+  width: 25vw;
+  color: #fff;
+  height: 80vh !important;
+  border-radius: 20px;
+}
+
+.music-note-empty {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.search-icon {
+  width: 60px;
+}
+
+.search {
+  margin-left: -38vw;
+  margin-top: -66vh;
+  position: absolute;
+}
+
+.empty-search {
+  flex-direction: column;
+  display: flex;
+}
+
+.song-search-img > img {
+  width: 70px;
+  border-radius: 5px;
+}
+.song-search-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  align-items: baseline;
+}
+.search-song-item {
+  display: flex;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+.song-info-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#search-wrapper {
+  position: absolute;
+  margin-top: -25vh;
+  margin-left: 7px;
+  width: 23vw;
+  max-height: 569px !important;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.search-song-item:hover {
+  background: #5e5e5e;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.song-playing-img > img {
+  width: 200px;
+  border-radius: 10px;
+}
+#song-playing {
+  position: absolute;
+  /*! margin: 0 auto; */
+  margin-left: 6vw;
+  margin-top: -22vh;
+}
+.song-playing-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.song-playing-title {
+  font-size: 18pt;
+}
+
+#cover-background {
+  /* background: url(http://localhost:4000/twigs-ep-1.jpg); */
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: -2;
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+}
+
+#cover-shadow {
+  display: none;
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  
+  background: rgb(2,0,36);
+  background: linear-gradient(35deg, rgba(2,0,36,0) 0%, rgb(68, 68, 68) 100%); 
+}
+
+.play-btns > img {
+  position: absolute;
+  width: 30px;
+  margin-top: 50px;
+  cursor: pointer;
+  margin-left: -11px;
+}
